@@ -1,54 +1,23 @@
 import { Component } from "react";
 import "./portfolio.css";
-import IMG1 from "../../assets/portfolio1.jpg";
-import IMG2 from "../../assets/portfolio2.jpg";
-import IMG3 from "../../assets/portfolio3.jpg";
-import IMG4 from "../../assets/portfolio4.jpg";
-import IMG5 from "../../assets/portfolio5.png";
-import IMG6 from "../../assets/portfolio6.jpg";
+import IMG1 from "../images/perfect app home.png";
+import IMG2 from "../images/portfolio.png";
+
 
 const data = [
   {
     id: 1,
     image: IMG1,
-    title: "Crypto Currency Dashboard & Financial Visualization",
-    github: "https://github.com/inextdeve",
-    demo: "https://inext.dev"
+    title: "Perfect Application ",
+    github: "https://github.com/SoundhararajanL/Perfect-Application",
+    demo: "https://quiet-chaja-518a79.netlify.app/"
   },
   {
     id: 2,
     image: IMG2,
-    title: "Crypto Currency Dashboard & Financial Visualization",
-    github: "https://github.com/inextdeve",
-    demo: "https://inext.dev"
-  },
-  {
-    id: 3,
-    image: IMG3,
-    title: "Crypto Currency Dashboard & Financial Visualization",
-    github: "https://github.com/inextdeve",
-    demo: "https://inext.dev"
-  },
-  {
-    id: 4,
-    image: IMG4,
-    title: "Crypto Currency Dashboard & Financial Visualization",
-    github: "https://github.com/inextdeve",
-    demo: "https://inext.dev"
-  },
-  {
-    id: 5,
-    image: IMG5,
-    title: "Crypto Currency Dashboard & Financial Visualization",
-    github: "https://github.com/inextdeve",
-    demo: "https://inext.dev"
-  },
-  {
-    id: 6,
-    image: IMG6,
-    title: "CryptCurrency Dashboard & Financial Visualization",
-    github: "https://github.com/inextdeve",
-    demo: "https://inext.dev"
+    title: "Portfolio",
+    github: "https://github.com/SoundhararajanL/portfolioProject1",
+    demo: "https://65e05907b3e646f1990e79cc--sprightly-cuchufli-035d20.netlify.app/"
   }
 ];
 
