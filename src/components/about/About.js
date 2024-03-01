@@ -1,7 +1,7 @@
 import { Component } from "react";
 import ME from "../images/profilephoto.JPG";
 import { BsAwardFill } from "react-icons/bs";
-import { FiUsers } from "react-icons/fi";
+import { HiAcademicCap } from "react-icons/hi";
 import { FaProjectDiagram } from "react-icons/fa";
 import "./about.css";
 
@@ -26,14 +26,15 @@ class About extends Component {
                 <small>2+ Years Working</small>
               </article>
               <article className="about__card">
-                <FiUsers className="about__icon" />
-                <h5>Clients</h5>
-                <small>100+ WorldWide</small>
+                <HiAcademicCap className="about__icon" />
+                <h5>Education</h5>
+                <small>BE-CSE</small><br></br>
+                <small>(2018-22)</small>
               </article>
               <article className="about__card">
                 <FaProjectDiagram className="about__icon" />
                 <h5>Projects</h5>
-                <small>40+ Completed Projects</small>
+                <small>10+ Completed Projects</small>
               </article>
             </div>
             <p>

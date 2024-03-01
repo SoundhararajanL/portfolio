@@ -4,6 +4,8 @@ import { AiOutlineUser } from "react-icons/ai";
 import { BiBook } from "react-icons/bi";
 import { RiServiceLine } from "react-icons/ri";
 import { BiMessageSquareDetail } from "react-icons/bi";
+import { FaProjectDiagram } from "react-icons/fa";
+
 import "./navbar.css";
 
 
@@ -43,6 +45,13 @@ class Nav extends React.Component {
           href="#services"
         >
           <RiServiceLine />
+        </a>
+        <a
+          onClick={() => this.setState({ active: "#portfolio" })}
+          className={this.state.active === "#portfolio" ? "active" : ""}
+          href="#portfolio"
+        >
+          <FaProjectDiagram />
         </a>
         <a
           onClick={() => this.setState({ active: "#contact" })}
