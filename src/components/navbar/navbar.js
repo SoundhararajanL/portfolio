@@ -5,7 +5,7 @@ import { BiBook } from "react-icons/bi";
 import { RiServiceLine } from "react-icons/ri";
 import { BiMessageSquareDetail } from "react-icons/bi";
 import "./navbar.css";
-import { useState } from "react";
+
 
 class Nav extends React.Component {
   constructor() { 
@@ -18,35 +18,35 @@ class Nav extends React.Component {
       <nav>
         <a
           onClick={() => this.setState({ active: "#" })}
-          className={this.state.active == "#" ? "active" : ""}
+          className={this.state.active === "#" ? "active" : ""}
           href="#"
         >
           <AiOutlineHome />
         </a>
         <a
           onClick={() => this.setState({ active: "#about" })}
-          className={this.state.active == "#about" ? "active" : ""}
+          className={this.state.active === "#about" ? "active" : ""}
           href="#about"
         >
           <AiOutlineUser />
         </a>
         <a
           onClick={() => this.setState({ active: "#experience" })}
-          className={this.state.active == "#experience" ? "active" : ""}
+          className={this.state.active === "#experience" ? "active" : ""}
           href="#experience"
         >
           <BiBook />
         </a>
         <a
           onClick={() => this.setState({ active: "#services" })}
-          className={this.state.active == "#services" ? "active" : ""}
+          className={this.state.active === "#services" ? "active" : ""}
           href="#services"
         >
           <RiServiceLine />
         </a>
         <a
           onClick={() => this.setState({ active: "#contact" })}
-          className={this.state.active == "#contact" ? "active" : ""}
+          className={this.state.active === "#contact" ? "active" : ""}
           href="#contact"
         >
           <BiMessageSquareDetail />

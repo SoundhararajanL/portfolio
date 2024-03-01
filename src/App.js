@@ -7,12 +7,13 @@ import Experience from "./components/experience/experience";
 import Services from "./components/services/services";
 import Contact from "./components/contact/contact";
 import Portfolio from "./components/portfolio/portfolio";
+import Footer from "./components/footer/footer";
 
 function App() {
 
   
   return (
-    <div style={{marginBottom:"10%"}}> 
+    <div > 
       <Header/>
       <Nav />
       <About/>
@@ -20,6 +21,7 @@ function App() {
      <Services/>
      <Portfolio/>
      <Contact/>
+     <Footer/>
      
      
     </div>

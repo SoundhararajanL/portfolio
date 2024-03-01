@@ -1,6 +1,6 @@
 header {
     height: 100vh;
-    padding-top: 7rem;
+    padding-top: 1rem;
     overflow: hidden;
   }
   .header__container {
@@ -8,6 +8,10 @@ header {
     height: 100%;
     position: relative;
    
+  }
+  .btn{
+    border-color: aquamarine;
+    color: azure;
   }
   /* ================= CTA ===================== */
   .cta {
@@ -37,13 +41,14 @@ header {
   .me {
     /* background: linear-gradient(var(--color-primary), transparent); */
     width: 22rem;
-    height: 30rem;
+    height: 17rem;
     position: absolute;
     left: calc(50% - 11rem);
-    margin-top: -2rem;
-    border-radius: 12rem 12rem 0 0;
+    margin-top: 2rem;
+    border-radius: 14rem 12rem 0 0;
     overflow: hidden;
     padding: 5rem 1.5rem 1.5rem 1.5rem;
+    /* box-shadow: rgba(72, 135, 202, 0.8) 0 0 90px 33px; */
   }
   /* ================= SCROLL DOWN ======= */
   .scroll__down {

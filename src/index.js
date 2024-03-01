@@ -1,5 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom';  // Correct import
+import ReactDOM from 'react-dom';
+
 import './App.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';

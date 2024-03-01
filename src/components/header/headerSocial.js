@@ -6,14 +6,14 @@ class HeaderSocials extends Component {
   render() {
     return (
       <div className="header__socials">
-        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" >
+        <a href="https://www.linkedin.com/in/soundhararajan-l-75786723b/" target="_blank" rel="noopener noreferrer" >
           <BsLinkedin />
         </a>
-        <a href="https://github.com" target="_blank" rel="noopener noreferrer" >
+        <a href="https://github.com/SoundhararajanL" target="_blank" rel="noopener noreferrer" >
           <FaGithub />
         </a>
         
-      </div>
+      </div> 
     );
   }
 }

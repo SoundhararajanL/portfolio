@@ -1,35 +1,73 @@
+
 import { Component, createRef } from "react";
 import "./contact.css";
 import { MdOutlineEmail } from "react-icons/md";
-import { RiMessengerLine } from "react-icons/ri";
 import { RiWhatsappLine } from "react-icons/ri";
-import emailjs from "@emailjs/browser";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+
 class Contact extends Component {
   constructor() {
     super();
     this.form = createRef();
+
+    // Initialize state
+    this.state = {
+      formData: {
+        name: "",
+        email: "",
+        message: "", // Add the message field in the initial state
+      },
+    };
   }
-  sendEmail(e) {
+
+  sendEmail = async (e) => {
     e.preventDefault();
 
-    emailjs
-      .sendForm(
-        "YOUR_SERVICE_ID",
-        "YOUR_TEMPLATE_ID",
-        this.form.current,
-        "YOUR_USER_ID"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
+    try {
+      const { name, email, message } = this.state.formData;
+      const formData = { name, email, message };
+
+      const response = await fetch('http://localhost:3001/api/saveFormData', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
         },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        console.log(result.message);
+        toast("Your message is sent successfully...", {
+          autoClose: 2000,
+         
+        });
+        
+      } else {
+        console.error('Failed to save form data:', result.message);
+      }
+    } catch (error) {
+      console.error('Error saving form data:', error);
+    }
+
     e.target.reset();
-  }
+  };
+
+  handleInputChange = (e) => {
+    const { name, value } = e.target;
+    this.setState((prevState) => ({
+      formData: {
+        ...prevState.formData,
+        [name]: value,
+      },
+    }));
+  };
+
   render() {
+    const { formData } = this.state;
     return (
       <section id="contact">
         <h5>Get In Touch</h5>
@@ -39,8 +77,8 @@ class Contact extends Component {
             <div className="contact__option">
               <MdOutlineEmail className="contact__option-icon" />
               <h4>Email</h4>
-              <h5>soundhar00001@gmail.com</h5>
-              <a href="mailto:soundhar00001@gmail.com">Send a message</a>
+              <h5 className="emailid">sowndhar00001@gmail.com</h5>
+              <a href="mailto:sowndhar00001@gmail.com">Send a message</a>
             </div>
             
             <div className="contact__option">
@@ -54,28 +92,32 @@ class Contact extends Component {
           </div>
           <form ref={this.form} onSubmit={this.sendEmail} action="">
             <input
-              type="text"
-              name="name"
-              placeholder="Your Full Name"
-              required
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="Your Email"
-              required
-            />
-            <textarea
-              name="message"
-              rows="7"
-              placeholder="Your Message"
-              required
-            ></textarea>
-            <button type="submit" className="btn btn-primary">
-              Send Message
-            </button>
+            type="text"
+            name="name"
+            placeholder="Your Full Name"
+            required
+            onChange={this.handleInputChange}
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            required
+            onChange={this.handleInputChange}
+          />
+          <textarea
+            name="message"
+            rows="7"
+            placeholder="Your Message"
+            required
+            onChange={this.handleInputChange}
+          ></textarea>
+          <button type="submit" className="btn btn-primary">
+            Send Message
+          </button>
           </form>
-        </div>
+       </div>
+       <ToastContainer />
       </section>
     );
   }
