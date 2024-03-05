@@ -40,15 +40,18 @@ header {
   /* ================= ME ================== */
   .me {
     /* background: linear-gradient(var(--color-primary), transparent); */
-    width: 22rem;
+    width: 57rem;
     height: 17rem;
-    position: absolute;
+   
     left: calc(50% - 11rem);
     margin-top: 2rem;
     border-radius: 14rem 12rem 0 0;
     overflow: hidden;
     padding: 5rem 1.5rem 1.5rem 1.5rem;
     /* box-shadow: rgba(72, 135, 202, 0.8) 0 0 90px 33px; */
+    margin-left: 10%
+   ;
+
   }
   /* ================= SCROLL DOWN ======= */
   .scroll__down {

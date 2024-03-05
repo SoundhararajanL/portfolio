@@ -20,7 +20,7 @@ class Contact extends Component {
       name: name.value,
       email: email.value,
       message: message.value,
-    };
+    }; 
 
    
 
