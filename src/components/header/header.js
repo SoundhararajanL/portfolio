@@ -8,12 +8,11 @@ class Header extends Component {
     return (
       <header>
         <div className="container header__container">
-         
-          
+          <h5>Hello I'm</h5>
+          <h1>Soundhararajan L</h1>
           <div className="text-light">Fullstack Developer</div>
           <CTA />
           <div className="me">
-          <h5>Hello I'm</h5>
             <img src={logo} alt="ME" />
           </div>
           <a href="#contact" className="scroll__down">
