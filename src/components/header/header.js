@@ -13,7 +13,7 @@ class Header extends Component {
           <div className="text-light">Fullstack Developer</div>
           <CTA />
           <div className="me">
-            <img src={logo} alt="ME" />
+            <img src={logo} alt="ME" /> 
           </div>
           <a href="#contact" className="scroll__down">
             Scroll Down end 

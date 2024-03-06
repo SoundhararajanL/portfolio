@@ -9,6 +9,7 @@ import Contact from "./components/contact/contact";
 import Portfolio from "./components/portfolio/portfolio";
 import Footer from "./components/footer/footer";
 
+
 function App() {
 
   
@@ -22,7 +23,7 @@ function App() {
      <Portfolio/>
      <Contact/>
      <Footer/>
-     
+    
      
     </div>
   );
