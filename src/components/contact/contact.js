@@ -5,6 +5,9 @@ import { MdOutlineEmail } from "react-icons/md";
 import { RiWhatsappLine } from "react-icons/ri";
 import emailjs from "@emailjs/browser";
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 class Contact extends Component {
   constructor() {
     super();
@@ -29,6 +32,9 @@ class Contact extends Component {
       .then(
         (result) => {
           console.log(result.text);
+          toast.success("Email sended !", {
+           
+          });
         },
         (error) => {
           console.log(error.text);
@@ -67,6 +73,7 @@ class Contact extends Component {
             </button>
           </form>
         </div>
+        <ToastContainer />
       </section>
     );
   }
