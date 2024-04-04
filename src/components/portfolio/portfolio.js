@@ -10,14 +10,14 @@ const data = [
     image: IMG1,
     title: "Perfect Application ",
     github: "https://github.com/SoundhararajanL/Perfect-Application",
-    demo: "https://65fbdabc84c183856aca17dc--soundharportfolio.netlify.app/"
+    demo: "https://65fbd7fb4953698a21049888--be-perfect.netlify.app/"
   },
   {
     id: 2,
     image: IMG2,
     title: "Portfolio",
     github: "https://github.com/SoundhararajanL/portfolioProject1",
-    demo: "https://65fbd7fb4953698a21049888--be-perfect.netlify.app/"
+    demo: "https://65fbdabc84c183856aca17dc--soundharportfolio.netlify.app/"
   }
 ];
 
